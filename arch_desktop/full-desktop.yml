@@ -1,0 +1,63 @@
+---
+- name: Install a full arch linux desktop
+  hosts: all
+  tasks:
+    - name: Upgrades packages and pacman repo
+      pacman: update_cache=yes upgrade=yes
+      become: yes
+    - name: Installs packages for a "full" desktop
+      pacman: name={{ item }} state=present
+      with_items:
+        - lightdm 
+        - freecad
+        - libreoffice
+        - firefox
+        - thunderbird
+        - inkscape
+        - gimp
+        - pidgin
+        - ktorrent
+        - clementine
+        - celestia
+        - chromium
+        - kdegraphics-okular
+        - k3b
+        - audacity
+        - tcpdump
+        - wireshark-gtk
+        - gthumb
+        - mpv
+        - vlc
+        - processing
+        - atom
+        - virt-manager
+        - openshot
+        - xorg-server
+        - git
+        - cheese
+        - guvcview
+        - kodi
+        - obs-studio
+        - klavaro
+        - stellarium
+        - base-devel 
+      become: yes
+    - name: Downloads package-query from git
+      git:
+        repo: https://aur.archlinux.org/package-query.git
+        dest: /tmp/package-query.git
+    - name: Downloads yaourt from Git
+      git:
+        repo: https://aur.archlinux.org/yaourt.git
+        dest: /tmp/yaourt.git
+    - name: Runs makepkg to install package-query
+      command: makepkg -fs --noconfirm chdir=/tmp/package-query.git
+    - name: Install package_query with pacman
+      command: pacman --noconfirm -U /tmp/package-query.git/package-query-1.8-2-x86_64.pkg.tar.xz
+      become: yes
+    - name: Runs makepkg to install yaourt
+      command: makepkg -fs --noconfirm chdir=/tmp/yaourt.git
+    - name: Install yaourt_query with pacman
+      command: pacman --noconfirm -U /tmp/yaourt.git/yaourt-1.8.1-1-any.pkg.tar.xz
+      become: yes
+
