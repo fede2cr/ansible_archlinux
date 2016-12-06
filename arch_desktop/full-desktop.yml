@@ -44,5 +44,6 @@
         - gnome-terminal
         - soundconverter
         - rsync
+        - arduino-avr-core
       become: yes
 
