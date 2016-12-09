@@ -34,6 +34,7 @@
         - libreoffice
         - lightdm 
         - lxc
+        - mono
         - mpv
         - obs-studio
         - openshot
@@ -45,9 +46,11 @@
         - stellarium
         - tcpdump
         - thunderbird
+        - unzip
         - vim
         - virt-manager
         - vlc
+        - wget
         - wireshark-gtk
         - xorg-server
         - youtube-dl
