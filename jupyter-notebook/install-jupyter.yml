@@ -1,0 +1,19 @@
+---
+- name: Configuracion basica de un Arch para Pi
+  hosts: virtual-ubuntu
+  tasks:
+    - name: Instala paquetes requeridos
+      apt: 
+        name: python3-pip
+        state: present
+        update_cache: yes
+      become: yes
+    - name: Actualiza herramienta pip3
+      command: pip3 install --upgrade pip
+      become: yes
+    - name: Instala modulo de Python de Jupyter y dependencias
+      command: pip3 install jupyter
+      become: yes
+    - name: Instala el Kernel de Kupyter para Bash
+      command: pip3 install bash_kernel
+      become: yes

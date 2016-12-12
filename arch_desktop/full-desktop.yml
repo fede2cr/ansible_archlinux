@@ -31,15 +31,18 @@
         - klavaro
         - kodi
         - ktorrent
+        - libappindicator-gtk3
         - libreoffice
         - lightdm 
         - lxc
         - mono
         - mpv
+        - mtr
         - obs-studio
         - openshot
         - pidgin
         - processing
+        - pwgen
         - rsync
         - screen
         - soundconverter
