@@ -1,0 +1,16 @@
+---
+- name: Instalación de Phant.IO para IoT
+  hosts: all
+  tasks:
+    - name: Instala paquetes requeridos
+      apt: 
+        name: "{{ item }}"
+        state: present
+        update_cache: yes
+      with_items:
+        - npm
+        - nodejs-legacy
+      become: yes
+    - name: Instala phant usando npm
+      npm: name=phant global=yes
+      become: yes
