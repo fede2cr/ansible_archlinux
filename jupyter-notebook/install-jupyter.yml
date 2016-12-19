@@ -1,6 +1,6 @@
 ---
-- name: Configuracion basica de un Arch para Pi
-  hosts: virtual-ubuntu
+- name: Instalación de paquetes requeridos para enseñar con Jupyter notebook
+  hosts: all
   tasks:
     - name: Instala paquetes requeridos
       apt: 
@@ -12,8 +12,8 @@
       command: pip3 install --upgrade pip
       become: yes
     - name: Instala modulo de Python de Jupyter y dependencias
-      command: pip3 install jupyter
+      command: pip3 install --upgrade jupyter
       become: yes
     - name: Instala el Kernel de Kupyter para Bash
-      command: pip3 install bash_kernel
+      command: pip3 install --upgrade bash_kernel
       become: yes
