@@ -1,5 +1,5 @@
 ---
-- name: Instalación de paquetes requeridos para enseñar con Jupyter notebook
+- name: Configuracion basica de un Arch para Pi
   hosts: all
   tasks:
     - name: Instala paquetes requeridos
@@ -12,8 +12,20 @@
       command: pip3 install --upgrade pip
       become: yes
     - name: Instala modulo de Python de Jupyter y dependencias
-      command: pip3 install --upgrade jupyter
+      command: pip3 install jupyter
       become: yes
     - name: Instala el Kernel de Kupyter para Bash
-      command: pip3 install --upgrade bash_kernel
+      command: pip3 install bash_kernel
       become: yes
+    - name: Ejecuta python3 -m bash_kernel.install
+      command: python3 -m bash_kernel.install
+      become: yes
+    - command: "jupyter notebook --generate-config"
+      become: no
+    - name: Agrega clave "greencore" para autenticacion
+      lineinfile:
+        regexp: "^#c.NotebookApp.password"
+        dest: "/home/{{ ansible_user }}/.jupyter/jupyter_notebook_config.py"
+        line: "c.NotebookApp.password = 'sha512:8c79bf18770a:e874ca1ba53f2538c308830430211c3604fb4da03feefc64280584b690ff41448445490e38a697ba29049f69d003a5c2bf70bfed547e9fb6858f06ba202774bc' "
+        state: present
+      become: no

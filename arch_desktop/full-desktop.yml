@@ -29,7 +29,7 @@
         - guvcview
         - inkscape
         - k3b
-        - kdegraphics-okular
+        - okular
         - klavaro
         - kodi
         - ktorrent
@@ -37,6 +37,7 @@
         - libreoffice
         - lightdm 
         - lxc
+        - mksyslinux
         - mono
         - mpv
         - mtr
@@ -49,6 +50,8 @@
         - screen
         - soundconverter
         - stellarium
+        - strace
+        - syslinux
         - tcpdump
         - thunderbird
         - unzip
