@@ -45,6 +45,8 @@
         - openshot
         - pidgin
         - processing
+        - python-pip
+        - python2-pip
         - pwgen
         - rsync
         - screen
@@ -62,4 +64,17 @@
         - wireshark-gtk
         - xorg-server
         - youtube-dl
+      become: yes
+    - name: Installs python2 modules
+      pip:
+        name: "{{ item }}"
+        executable: pip2
+      with_items:
+        - jsonmerge
+        - json-spec
+      become: yes
+    - name: Installs python3 modules
+      pip:
+        name: jsonmerge
+        executable: pip3
       become: yes
