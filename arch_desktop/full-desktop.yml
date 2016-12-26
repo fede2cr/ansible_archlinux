@@ -72,9 +72,18 @@
       with_items:
         - jsonmerge
         - json-spec
+        - esptool
       become: yes
     - name: Installs python3 modules
       pip:
         name: jsonmerge
         executable: pip3
+      become: yes
+    - name: Starts and enable services
+      service:
+        name: "{{ item }}"
+        enabled: yes
+        state: started
+      with_items:
+        - NetworkManager
       become: yes
