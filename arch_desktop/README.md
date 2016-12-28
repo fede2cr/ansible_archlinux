@@ -1,10 +1,7 @@
-# Ansible module for AUR
+# Installs an Arch Linux Desktop
 
-** This module is broken **
+This is an ansible recipe I use to rebuild my Arch desktop, so it's quite personalized, but I hope you can use it to base off and build your own.
 
-I cannot find how to use properly sudo with makepkg. Work in progress.
-
-Taken from https://gist.github.com/wrecker/39ecb1eb1ab8ee1d0ce1
-## TODO for AUR module:
-- [x] Replace "sudo" with "become"
-- [ ] Dependencies asks for sudo password, so it fails
+## TODO
+- [ ] The ansible pacman module seems to fail idempotency tests. I need to debug if this is a thing with one of my packages or in general with the module
+- [ ] Add automated testing
