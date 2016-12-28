@@ -7,8 +7,8 @@ arch:
   packages:
     - ansible
   script:
-    - "which python"
-    - "mkdir arch_desktop/inventory/; echo localhost > arch_desktop/inventory/hosts"
+    - "which python2"
+    - "mkdir arch_desktop/inventory/; echo localhost ansible_python_interpreter=/usr/bin/python2 > arch_desktop/inventory/hosts"
     - "cd arch_desktop; ansible-playbook full-desktop.yml --syntax-check"
     - "cd arch_desktop; sudo ansible-playbook full-desktop.yml --connection=local -b"
 
