@@ -37,6 +37,7 @@
         - libreoffice
         - lightdm 
         - lxc
+        - networkmanager
         - mksyslinux
         - mono
         - mpv
