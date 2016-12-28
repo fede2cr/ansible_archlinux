@@ -7,7 +7,9 @@ arch:
   packages:
     - ansible
   script:
-    - "cd arch-desktop; sudo ansible-playbook full-desktop.yml"
+    - "ls; ls /"
+    - "cd arch-desktop; ansible-playbook full-desktop.yml --syntax-check"
+    - "cd arch-desktop; sudo ansible-playbook full-desktop.yml --connection=local"
 
 script:
   - "curl -s https://raw.githubusercontent.com/mikkeloscar/arch-travis/master/arch-travis.sh | bash"
