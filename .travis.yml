@@ -10,7 +10,6 @@ arch:
     - "mkdir arch_desktop/inventory/; echo localhost ansible_python_interpreter=/usr/bin/python2 > arch_desktop/inventory/hosts"
     - "cd arch_desktop; ansible-playbook full-desktop.yml --syntax-check"
     - "cd arch_desktop; sudo ansible-playbook full-desktop.yml --connection=local -b"
-    - "systemctl list-units"
 
 script:
   - "curl -s https://raw.githubusercontent.com/mikkeloscar/arch-travis/master/arch-travis.sh | bash"
