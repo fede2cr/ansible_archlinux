@@ -7,7 +7,7 @@ arch:
   packages:
     - ansible
   script:
-    - "mkdir arch_desktop/inventory/; echo localhost > arch_desktop/inventory/hosts/"
+    - "mkdir arch_desktop/inventory/; echo localhost > arch_desktop/inventory/hosts"
     - "cd arch_desktop; ansible-playbook full-desktop.yml --syntax-check"
     - "cd arch_desktop; ansible-playbook full-desktop.yml --connection=local --sudo"
 
