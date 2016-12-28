@@ -9,7 +9,7 @@ arch:
   script:
     - "mkdir arch_desktop/inventory/; echo localhost > arch_desktop/inventory/hosts"
     - "cd arch_desktop; ansible-playbook full-desktop.yml --syntax-check"
-    - "cd arch_desktop; ansible-playbook full-desktop.yml --connection=local --sudo"
+    - "cd arch_desktop; ansible-playbook full-desktop.yml --connection=local -b"
 
 script:
   - "curl -s https://raw.githubusercontent.com/mikkeloscar/arch-travis/master/arch-travis.sh | bash"
