@@ -69,6 +69,7 @@
       pip:
         name: "{{ item }}"
         executable: pip2
+        state: latest
       with_items:
         - jsonmerge
         - json-spec
@@ -78,6 +79,7 @@
       pip:
         name: jsonmerge
         executable: pip3
+        state: latest
       become: yes
     - name: Starts and enable services
       service:
