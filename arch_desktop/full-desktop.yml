@@ -90,3 +90,4 @@
       with_items:
         - NetworkManager
       become: yes
+      ignore_errors: true
