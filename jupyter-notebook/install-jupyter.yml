@@ -1,5 +1,5 @@
 ---
-- name: Configuracion basica de un Arch para Pi
+- name: Confiura jupyter notebook y kernel de bash sobre equipo Debian/Ubuntu
   hosts: all
   tasks:
     - name: Instala paquetes requeridos
@@ -11,11 +11,14 @@
     - name: Actualiza herramienta pip3
       command: pip3 install --upgrade pip
       become: yes
-    - name: Instala modulo de Python de Jupyter y dependencias
-      command: pip3 install jupyter
-      become: yes
-    - name: Instala el Kernel de Kupyter para Bash
-      command: pip3 install bash_kernel
+    - name: Instala modulo de Python de Jupyter, y bash_kernel
+      pip:
+        name: "{{ item }}"
+        executable: pip3
+        state: latest
+      with_items:
+        - jupyter
+        - bash_kernel
       become: yes
     - name: Ejecuta python3 -m bash_kernel.install
       command: python3 -m bash_kernel.install
