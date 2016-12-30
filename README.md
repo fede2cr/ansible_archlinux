@@ -1,4 +1,4 @@
-# ansible_recipes
+# ansible_recipes [![Build Status](https://travis-ci.org/fede2cr/ansible_recipes.svg?branch=master)](https://travis-ci.org/fede2cr/ansible_recipes)
 Ansible recipes for my own stuff... might be useful for your stuff as well
 
 ## Instructions
