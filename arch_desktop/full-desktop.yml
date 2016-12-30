@@ -18,6 +18,8 @@
         - cheese
         - chromium
         - clementine
+        - dia
+        - dmidecode
         - firefox
         - freecad
         - gimp
@@ -35,7 +37,8 @@
         - ktorrent
         - libappindicator-gtk3
         - libreoffice
-        - lightdm 
+        - lightdm
+        - lshw
         - lxc
         - networkmanager
         - mksyslinux
@@ -48,6 +51,7 @@
         - processing
         - python-pip
         - python2-pip
+        - pv
         - pwgen
         - rsync
         - screen
@@ -78,9 +82,12 @@
       become: yes
     - name: Installs python3 modules
       pip:
-        name: jsonmerge
+        name: "{{ item }}"
         executable: pip3
         state: latest
+      with_items:
+        - jsonmerge
+        - droopescan
       become: yes
     - name: Starts and enable services
       service:
@@ -91,3 +98,13 @@
         - NetworkManager
       become: yes
       ignore_errors: true
+    - name: Disables systemd-coredump (creates dir)
+      file: path=/etc/systemd/coredump.conf.d/ state=directory mode=0755
+      become: yes
+    - name: Disables systemd-coredump (creates conf file)
+      copy:
+        dest: /etc/systemd/coredump.conf.d/disable.conf
+        content: |
+          [Coredump]
+          Storage=none
+      become: yes
