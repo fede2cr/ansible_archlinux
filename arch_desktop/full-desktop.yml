@@ -115,6 +115,7 @@
         line: 'GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevname=0"'
         state: present
         backrefs: yes
+      ignore_errors: true
       become: yes
     - name: Actualiza grub luego de deshabilitar biosdevname 
       command: grub-mkconfig -o /boot/grub/grub.cfg
