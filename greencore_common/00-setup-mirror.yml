@@ -10,7 +10,7 @@
       become: yes
     - name: Elimina lineas que referencien a backports
       lineinfile: >
-        regexp="yakkety-backports"
+        regexp="-backports"
         dest=/etc/apt/sources.list
         state=absent
       become: yes
