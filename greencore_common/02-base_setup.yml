@@ -38,6 +38,8 @@
         - strace
         - vim
         - wget
+        - python-pip
+        - lxc-dev
       become: yes
     - name: Interfaces con bonding, 4xeth de miembro, con bridge br0
       copy:
