@@ -17,6 +17,8 @@
         - celestia
         - cheese
         - chromium
+        - cinnamon
+        - cinnamon-screensaver
         - clementine
         - dia
         - dkms
@@ -51,6 +53,7 @@
         - pidgin
         - processing
         - python-pip
+        - python-setproctitle
         - python2-pip
         - pv
         - pwgen
