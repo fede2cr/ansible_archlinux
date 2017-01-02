@@ -19,6 +19,7 @@
         - chromium
         - clementine
         - dia
+        - dkms
         - dmidecode
         - firefox
         - freecad
@@ -58,6 +59,7 @@
         - soundconverter
         - stellarium
         - strace
+        - openssh
         - syslinux
         - tcpdump
         - thunderbird
@@ -120,4 +122,16 @@
     - name: Actualiza grub luego de deshabilitar biosdevname 
       command: grub-mkconfig -o /boot/grub/grub.cfg
       ignore_errors: true
+      become: yes
+    - name: Crea usuario alvaro
+      user:
+        name: alvaro
+        groups: wheel,uucp
+        comment: Conde
+      become: yes
+    - name: Configuracion para sudo desde grupo wheel
+      copy:
+        dest: /etc/sudoers.d/wheel.conf
+        content: '%wheel ALL=(ALL) ALL'
+        validate: 'visudo -cf %s'
       become: yes
