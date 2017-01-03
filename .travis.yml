@@ -12,6 +12,7 @@ arch:
     - "cd arch_desktop; sudo ansible-playbook full-desktop.yml -b"
 
 script:
+  - "ls"
   - "cp inventory/hosts.example jupyter-notebook/inventory/hosts"
   - "cd jupyter-notebook; ansible-playbook --syntax-check install-jupyter.yml"
   - "cd jupyter-notebook; sudo ansible-playbook install-jupyter.yml -b"
