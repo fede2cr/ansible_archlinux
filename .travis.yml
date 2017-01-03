@@ -13,9 +13,8 @@ arch:
   packages:
     - ansible
   script:
-    - "cp inventory/hosts.example arch_desktop/inventory/hosts"
-    - "cd arch_desktop; ansible-playbook full-desktop.yml --syntax-check"
-    - "cd arch_desktop; sudo ansible-playbook full-desktop.yml -b"
+    - "ansible-playbook -i inventory/hosts.example arch_desktop/full-desktop.yml --syntax-check"
+    - "sudo ansible-playbook -i inventory/hosts.example arch_desktop/full-desktop.yml"
 
 script:
   - "ansible-playbook -i inventory/hosts.example --syntax-check jupyter-notebook/install-jupyter.yml"
