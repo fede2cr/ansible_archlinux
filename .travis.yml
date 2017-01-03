@@ -17,6 +17,8 @@ arch:
   script:
     - "ansible-playbook -i inventory/hosts.example arch_desktop/full-desktop.yml --syntax-check"
     - "sudo ansible-playbook -i inventory/hosts.example arch_desktop/full-desktop.yml"
+    - "ansible-playbook -i inventory/hosts.example octoprint_setup/octoprint_setup.yml --syntax-check"
+    - "sudo ansible-playbook -i inventory/hosts.example octoprint_setup/octoprint_setup.yml"
 
 script:
   - "ansible-playbook -i inventory/hosts.example --syntax-check jupyter-notebook/install-jupyter.yml"

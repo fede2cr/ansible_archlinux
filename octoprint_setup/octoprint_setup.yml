@@ -1,8 +1,8 @@
 ---
 - name: Configuracion basica de un Arch para Pi
-  hosts: raspberry-arch-linux
+  hosts: all
   vars:
-    octo_path: /home/alarm/Octoprint-git-ansible
+    octo_path: "{{ ansible_env.HOME }}/Octoprint-git"
   tasks:
     - pacman:
         name: "{{ item }}"
@@ -18,5 +18,5 @@
       git:
         repo: https://github.com/foosel/OctoPrint.git
         dest: "{{ octo_path }}"
-    - command: /usr/bin/virtualenv2 /home/alarm/Octoprint-git-ansible/venv chdir=/home/alarm/Octoprint-git-ansible
-    - command: ./venv/bin/python setup.py install chdir=/home/alarm/Octoprint-git-ansible
+    - command: /usr/bin/virtualenv2 {{ octo_path }}/venv chdir={{ octo_path }}
+    - command: ./venv/bin/python setup.py install chdir={{ octo_path }}
