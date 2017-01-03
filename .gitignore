@@ -1,4 +1,3 @@
 *.retry
 *.swp
-inventory/
-ansible.cfg
+inventory/hosts
