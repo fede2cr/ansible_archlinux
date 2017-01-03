@@ -16,6 +16,4 @@ script:
   - "cp inventory/hosts.example jupyter-notebook/inventory/hosts"
   - "cd jupyter-notebook; ansible-playbook --syntax-check install-jupyter.yml"
   - "cd jupyter-notebook; sudo ansible-playbook install-jupyter.yml -b"
-
-script:
   - "curl -s https://raw.githubusercontent.com/mikkeloscar/arch-travis/master/arch-travis.sh | bash"
