@@ -16,8 +16,6 @@ arch:
     - "cd arch_desktop; sudo ansible-playbook full-desktop.yml -b"
 
 script:
-  - "cp inventory/hosts.example jupyter-notebook/inventory/hosts"
-  - "cat jupyter-notebook/inventory/hosts"
-  - "( cd jupyter-notebook; ansible-playbook --syntax-check install-jupyter.yml )"
-  - "( cd jupyter-notebook; sudo ansible-playbook install-jupyter.yml )"
+  - "ansible-playbook -i inventory/hosts.example --syntax-check jupyter-notebook/install-jupyter.yml"
+  - "sudo ansible-playbook -i inventory/hosts.example jupyter-notebook/install-jupyter.yml"
   - "curl -s https://raw.githubusercontent.com/mikkeloscar/arch-travis/master/arch-travis.sh | bash"
