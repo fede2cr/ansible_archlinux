@@ -17,6 +17,11 @@ arch:
   script:
     - "ansible-playbook -i inventory/hosts.example arch_desktop/full-desktop.yml --syntax-check"
     - "sudo ansible-playbook -i inventory/hosts.example arch_desktop/full-desktop.yml"
+    - >
+      sudo ansible-playbook -i inventory/hosts.example arch_desktop/full-desktop.yml
+      | grep -q 'changed=0.*failed=0'
+      && (echo 'Idempotence test: pass' && exit 0)
+      || (echo 'Idempotence test: fail' && exit 1)
     - "ansible-playbook -i inventory/hosts.example octoprint_setup/octoprint_setup.yml --syntax-check"
     - "sudo ansible-playbook -i inventory/hosts.example octoprint_setup/octoprint_setup.yml"
 

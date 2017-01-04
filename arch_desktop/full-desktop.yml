@@ -20,6 +20,8 @@
         - cinnamon
         - cinnamon-screensaver
         - clementine
+        - cups
+        - debootstrap
         - dia
         - dkms
         - dmidecode
@@ -30,8 +32,10 @@
         - gnome-calculator
         - gnome-screenshot
         - gnome-terminal
+        - gtk3-print-backends
         - gthumb
         - guvcview
+        - hplip
         - inkscape
         - k3b
         - okular
@@ -39,7 +43,7 @@
         - kodi
         - ktorrent
         - libappindicator-gtk3
-        - libreoffice
+        - libreoffice-fresh
         - lightdm
         - lshw
         - lxc
@@ -58,12 +62,15 @@
         - pv
         - pwgen
         - rsync
+        - sane
         - screen
+        - simple-scan
         - soundconverter
         - stellarium
         - strace
-        - openssh
         - syslinux
+        - system-config-printer
+        - openssh
         - tcpdump
         - thunderbird
         - unzip
@@ -101,6 +108,7 @@
         state: started
       with_items:
         - NetworkManager
+        - org.cups.cupsd.service
       become: yes
       ignore_errors: true
     - name: Disables systemd-coredump (creates dir)
@@ -122,14 +130,17 @@
         backrefs: yes
       ignore_errors: true
       become: yes
+      register: grub_default_biosdevname
     - name: Actualiza grub luego de deshabilitar biosdevname 
       command: grub-mkconfig -o /boot/grub/grub.cfg
       ignore_errors: true
       become: yes
+      when: grub_default_biosdevname.changed
     - name: Crea usuario alvaro
       user:
         name: alvaro
-        groups: wheel,uucp
+        groups: wheel,uucp,sys
+        append: yes
         comment: Conde
       become: yes
     - name: Configuracion para sudo desde grupo wheel

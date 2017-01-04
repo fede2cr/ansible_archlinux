@@ -18,5 +18,11 @@
       git:
         repo: https://github.com/foosel/OctoPrint.git
         dest: "{{ octo_path }}"
-    - command: /usr/bin/virtualenv2 {{ octo_path }}/venv chdir={{ octo_path }}
-    - command: ./venv/bin/python setup.py install chdir={{ octo_path }}
+    - name: Instala venv de python
+      command: /usr/bin/virtualenv2 {{ octo_path }}/venv
+      args:
+        chdir: "{{ octo_path }}"
+    - name: Ejecuta setup.py dentro del ambiente venv
+      command: ./venv/bin/python setup.py install
+      args:
+        chdir: "{{ octo_path }}"
