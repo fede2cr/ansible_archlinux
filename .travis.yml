@@ -26,8 +26,8 @@ arch:
     - "sudo ansible-playbook -i inventory/hosts.example octoprint_setup/octoprint_setup.yml"
 
 script:
-  - "ansible-playbook -i ../inventory/hosts.example --syntax-check greencore_common/*yml"
-  - "sudo ansible-playbook -i ../inventory/hosts.example --syntax-check greencore_common/01-upgrade.yml"
+  - "ansible-playbook -i inventory/hosts.example --syntax-check greencore_common/*yml"
+  - "sudo ansible-playbook -i inventory/hosts.example --syntax-check greencore_common/01-upgrade.yml"
   - "ansible-playbook -i inventory/hosts.example --syntax-check jupyter-notebook/install-jupyter.yml"
   - "sudo ansible-playbook -i inventory/hosts.example jupyter-notebook/install-jupyter.yml"
   - "ansible-playbook -i inventory/hosts.example --syntax-check phant.io/install-phant.yml"
