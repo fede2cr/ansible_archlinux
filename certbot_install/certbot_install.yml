@@ -1,0 +1,26 @@
+---
+- name: Instala dependencias, herramientas y cron de ejemplo para Certbot
+  hosts: all
+  tasks:
+    - name: Instala dependencia usando apt
+    - apt:
+        name: "{{ $item }}"
+        state: latest
+      with_items:
+        - python-letsencrypt-apache
+      become: yes
+      when: (ansible_distribution == 'Ubuntu' and ansible_distribution_version == '16.04')
+    - apt:
+        name: "{{ $item }}"
+        state: latest
+      with_items:
+        - certbot
+      become: yes
+      when: (ansible_distribution == 'Ubuntu' and ansible_distribution_version == '16.10')
+    - pacman:
+        name: "{{ item }}"
+        state: installed
+      with_items:
+        - certbot
+      when: ansible_distribution == 'Archlinux'
+      become: yes
