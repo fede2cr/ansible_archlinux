@@ -1,0 +1,21 @@
+---
+- name: Instala terminal kitty
+  hosts: all
+  vars:
+    git_path: "{{ ansible_env.HOME }}/kitty"
+  tasks:
+    - name: Instala dependencias usando pacman
+      pacman:
+        name: "{{ item }}"
+        state: installed
+      with_items:
+        - glfw-x11
+      become: yes
+    - name: Descarga kitty
+      git:
+        repo: https://github.com/kovidgoyal/kitty.git
+        dest: "{{ git_path }}"
+    - name: Ejecuta setup.py build para kitty
+      command: python3 setup.py build
+      args:
+        chdir: "{{ git_path }}"
