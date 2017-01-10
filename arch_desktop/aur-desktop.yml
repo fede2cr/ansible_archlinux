@@ -1,15 +1,20 @@
 ---
 - name: Install the AUR packages remaining for full desktop
   hosts: all
-  gather_facts: yes
-  vars:
-    makepkg_nonroot_user: alvaro
   tasks:
     - name: Upgrades packages and pacman repo
       pacman: update_cache=yes 
       become: yes
-    - name: Install AUR packages
-      include: aur/pkg.yml pkg_name=fritzing
-
-
-      # Paquetes: gpredict
+    - name: Installs packages from AUR using pacaur
+      aur:
+        name: "{{ item }}"
+        user: alvaro
+      with_items:
+        - fritzing
+        - xflux
+        - package-query
+        - yaourt
+        - hamlib
+        - grig
+        - gpredict
+        - xflux-gui-git
