@@ -3,7 +3,7 @@
   hosts: all
   tasks:
     - name: Instala dependencia usando apt
-    - apt:
+      apt:
         name: "{{ $item }}"
         state: latest
       with_items:
