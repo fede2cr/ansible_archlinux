@@ -14,6 +14,7 @@
         - atom
         - audacity
         - base-devel
+        - bind-tools
         - celestia
         - cheese
         - chromium
@@ -39,6 +40,7 @@
         - inkscape
         - ipcalc
         - k3b
+        - kteatime
         - okular
         - klavaro
         - kodi
