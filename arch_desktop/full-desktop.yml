@@ -15,6 +15,7 @@
         - audacity
         - base-devel
         - bind-tools
+        - cdrdao
         - celestia
         - cheese
         - chromium
@@ -26,6 +27,7 @@
         - dia
         - dkms
         - dmidecode
+        - dvd+rw-tools
         - firefox
         - freecad
         - gimp
