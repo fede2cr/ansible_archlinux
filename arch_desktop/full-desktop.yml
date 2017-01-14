@@ -106,6 +106,7 @@
       with_items:
         - jsonmerge
         - droopescan
+        - adafruit-ampy
       become: yes
     - name: Starts and enable services
       service:
