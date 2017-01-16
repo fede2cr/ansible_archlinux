@@ -41,6 +41,7 @@
         - hplip
         - inkscape
         - ipcalc
+        - iptraf-ng
         - isomd5sum
         - k3b
         - kteatime
@@ -68,6 +69,7 @@
         - pv
         - pwgen
         - rsync
+        - rpmextract
         - sane
         - screen
         - simple-scan
