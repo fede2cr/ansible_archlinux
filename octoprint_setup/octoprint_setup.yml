@@ -1,5 +1,5 @@
 ---
-- name: Configuracion basica de un Arch para Pi
+- name: Instalación de Octoprint sobre una Pi con Arch
   hosts: all
   vars:
     octo_path: "{{ ansible_env.HOME }}/Octoprint-git"
