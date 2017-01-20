@@ -18,6 +18,8 @@
         - grig
         - gpredict
         - xflux-gui-git
-        - rpm2cpio
-        - rpm
-        - rinse
+        - bazel
+        - cuda
+        - dasher
+          #- cudnn
+          # - python-tensorflow
