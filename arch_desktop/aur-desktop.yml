@@ -21,5 +21,6 @@
         - bazel
         - cuda
         - dasher
+        - openrocket
           #- cudnn
           # - python-tensorflow
