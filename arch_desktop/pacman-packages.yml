@@ -1,0 +1,58 @@
+---
+- name: Install a full arch linux desktop
+  hosts: all
+  tasks:
+    - include_vars: package-list.yml
+    - name: Upgrades packages and pacman repo
+      pacman: update_cache=yes upgrade=yes
+      become: yes
+    - name: Installs base packages
+      pacman: name={{ item }} state=present
+      with_flattened:
+        - "{{ packages_base }}"
+      become: yes
+    - name: Installs desktop packages
+      pacman: name={{ item }} state=present
+      with_flattened:
+        - "{{ packages_desktop }}"
+      become: yes
+    - name: Installs dev packages
+      pacman: name={{ item }} state=present
+      with_flattened:
+        - "{{ packages_dev }}"
+      become: yes
+    - name: Installs stem packages
+      pacman: name={{ item }} state=present
+      with_flattened:
+        - "{{ packages_stem }}"
+      become: yes
+    - name: Installs python2 modules
+      pip:
+        name: "{{ item }}"
+        executable: pip2
+        state: latest
+      with_items:
+        - jsonmerge
+        - json-spec
+        - esptool
+      become: yes
+    - name: Installs python3 modules
+      pip:
+        name: "{{ item }}"
+        executable: pip3
+        state: latest
+      with_items:
+        - jsonmerge
+        - droopescan
+        - adafruit-ampy
+      become: yes
+    - name: Starts and enable services
+      service:
+        name: "{{ item }}"
+        enabled: yes
+        state: started
+      with_items:
+        - NetworkManager
+        - org.cups.cupsd.service
+      become: yes
+      ignore_errors: true

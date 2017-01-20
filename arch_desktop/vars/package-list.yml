@@ -1,0 +1,92 @@
+---
+packages_base:
+  - [ 'ansible',
+    'screen',
+    'bind-tools']
+packages_desktop:
+  - [ 'audacity',
+    'cinnamon',
+    'cinnamon-screensaver',
+    'cdrdao',
+    'cheese',
+    'chromium',
+    'clementine',
+    'cool-retro-term',
+    'cups',
+    'dia',
+    'firefox']
+packages_dev:
+  - [ 'arduino',
+    'arduino-avr-core',
+    'atom',
+    'base-devel']
+packages_stem:
+  - [ 'celestia']
+
+    #        - cuda
+    #        - debootstrap
+    #        - dkms
+    #        - dmidecode
+    #        - dvd+rw-tools
+    #        - firefox
+    #        - gimp
+    #        - git
+    #        - gnome-calculator
+    #        - gnome-screenshot
+    #        - gnome-terminal
+    #        - gtk3-print-backends
+    #        - gthumb
+    #        - guvcview
+    #        - hplip
+    #        - inkscape
+    #        - ipcalc
+    #        - iptraf-ng
+    #        - isomd5sum
+    #        - k3b
+    #        - kicad
+    #        - kteatime
+    #        - okular
+    #        - klavaro
+    #        - kodi
+    #        - ktorrent
+    #        - libappindicator-gtk3
+    #        - libreoffice-fresh
+    #        - lightdm
+    #        - lshw
+    #        - lsof
+    #        - lxc
+    #        - networkmanager
+    #        - mksyslinux
+    #        - mono
+    #        - mpv
+    #        - mtr
+    #        - obs-studio
+    #        - openshot
+    #        - pidgin
+    #        - processing
+    #        - python-pip
+    #        - python-setproctitle
+    #        - python2-pip
+    #        - pv
+    #        - pwgen
+    #        - rsync
+    #        - rpmextract
+    #        - sane
+    #        - screen
+    #        - simple-scan
+    #        - soundconverter
+    #        - stellarium
+    #        - strace
+    #        - syslinux
+    #        - system-config-printer
+    #        - openssh
+    #        - tcpdump
+    #        - thunderbird
+    #        - unzip
+    #        - vim
+    #        - virt-manager
+    #        - vlc
+    #        - wget
+    #        - wireshark-gtk
+    #        - xorg-server
+    #        - youtube-dl
