@@ -25,7 +25,7 @@ arch:
     - "ansible-playbook -i inventory/hosts.example arch_desktop/pacman-packages.yml --syntax-check"
     - "sudo ansible-playbook -i inventory/hosts.example arch_desktop/pacman-packages.yml"
     - >
-      sudo ansible-playbook -i inventory/hosts.example arch_desktop/full-desktop.yml
+      sudo ansible-playbook -i inventory/hosts.example arch_desktop/pacman-packages.yml
       | grep -q 'changed=0.*failed=0'
       && (echo 'Idempotence test: pass' && exit 0)
       || (echo 'Idempotence test: fail' && exit 1)
