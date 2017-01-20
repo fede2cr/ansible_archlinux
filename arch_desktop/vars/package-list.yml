@@ -2,7 +2,13 @@
 packages_base:
   - [ 'ansible',
     'screen',
-    'bind-tools']
+    'bind-tools',
+    'python-pip',
+    'python-setproctitle',
+    'python2-pip',
+    'pv',
+    'pwgen',
+    'rsync']
 packages_desktop:
   - [ 'audacity',
     'cinnamon',
@@ -64,12 +70,6 @@ packages_stem:
     #        - openshot
     #        - pidgin
     #        - processing
-    #        - python-pip
-    #        - python-setproctitle
-    #        - python2-pip
-    #        - pv
-    #        - pwgen
-    #        - rsync
     #        - rpmextract
     #        - sane
     #        - screen
