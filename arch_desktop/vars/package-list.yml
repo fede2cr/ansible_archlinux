@@ -8,7 +8,19 @@ packages_base:
     'python2-pip',
     'pv',
     'pwgen',
-    'rsync']
+    'rsync',
+    'dkms',
+    'dmidecode',
+    'ipcalc',
+    'iptraf-ng',
+    'isomd5sum',
+    'lshw',
+    'lsof',
+    'networkmanager',
+    'openssh',
+    'tcpdump',
+    'vim',
+    'wget']
 packages_desktop:
   - [ 'audacity',
     'cinnamon',
@@ -20,73 +32,64 @@ packages_desktop:
     'cool-retro-term',
     'cups',
     'dia',
-    'firefox']
+    'firefox',
+    'gimp',
+    'dvd+rw-tools',
+    'gnome-calculator',
+    'gnome-screenshot',
+    'gnome-terminal',
+    'gtk3-print-backends',
+    'gthumb',
+    'guvcview',
+    'hplip',
+    'inkscape',
+    'k3b',
+    'kteatime',
+    'okular',
+    'klavaro',
+    'kodi',
+    'ktorrent',
+    'libappindicator-gtk3',
+    'libreoffice-fresh',
+    'lightdm',
+    'mono',
+    'mpv',
+    'mtr',
+    'obs-studio',
+    'openshot',
+    'pidgin',
+    'sane',
+    'simple-scan',
+    'soundconverter',
+    'system-config-printer',
+    'thunderbird',
+    'unzip',
+    'vlc',
+    'wireshark-gtk',
+    'xorg-server',
+    'youtube-dl']
 packages_dev:
   - [ 'arduino',
     'arduino-avr-core',
     'atom',
-    'base-devel']
+    'base-devel',
+    'qscintilla-qt5',
+    'python-qscintilla-qt5-common',
+    'python-pycodestyle',
+    'python-pyflakes',
+    'python-pyserial',
+    'python-qscintilla-qt5',
+    'debootstrap',
+    'cuda',
+    'git',
+    'kicad',
+    'mksyslinux',
+    'processing',
+    'rpmextract',
+    'strace',
+    'syslinux',
+    'lxc',
+    'virt-manager']
 packages_stem:
-  - [ 'celestia']
-
-    #        - cuda
-    #        - debootstrap
-    #        - dkms
-    #        - dmidecode
-    #        - dvd+rw-tools
-    #        - firefox
-    #        - gimp
-    #        - git
-    #        - gnome-calculator
-    #        - gnome-screenshot
-    #        - gnome-terminal
-    #        - gtk3-print-backends
-    #        - gthumb
-    #        - guvcview
-    #        - hplip
-    #        - inkscape
-    #        - ipcalc
-    #        - iptraf-ng
-    #        - isomd5sum
-    #        - k3b
-    #        - kicad
-    #        - kteatime
-    #        - okular
-    #        - klavaro
-    #        - kodi
-    #        - ktorrent
-    #        - libappindicator-gtk3
-    #        - libreoffice-fresh
-    #        - lightdm
-    #        - lshw
-    #        - lsof
-    #        - lxc
-    #        - networkmanager
-    #        - mksyslinux
-    #        - mono
-    #        - mpv
-    #        - mtr
-    #        - obs-studio
-    #        - openshot
-    #        - pidgin
-    #        - processing
-    #        - rpmextract
-    #        - sane
-    #        - screen
-    #        - simple-scan
-    #        - soundconverter
-    #        - stellarium
-    #        - strace
-    #        - syslinux
-    #        - system-config-printer
-    #        - openssh
-    #        - tcpdump
-    #        - thunderbird
-    #        - unzip
-    #        - vim
-    #        - virt-manager
-    #        - vlc
-    #        - wget
-    #        - wireshark-gtk
-    #        - xorg-server
-    #        - youtube-dl
+  - [ 'celestia',
+  'stellarium']
