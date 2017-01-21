@@ -2,6 +2,7 @@
 - name: Install the AUR packages remaining for full desktop
   hosts: all
   tasks:
+    - include_vars: package-list.yml
     - name: Upgrades packages and pacman repo
       pacman: update_cache=yes 
       become: yes
@@ -9,19 +10,5 @@
       aur:
         name: "{{ item }}"
         user: alvaro
-      with_items:
-        - fritzing
-        - xflux
-        - package-query
-        - yaourt
-        - hamlib
-        - grig
-        - gpredict
-        - xflux-gui-git
-        - bazel
-        - cuda
-        - dasher
-        - openrocket
-        - mu-editor
-          #- cudnn
-          # - python-tensorflow
+      with_flattened:
+        "{{ packages_aur }}"

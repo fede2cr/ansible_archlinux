@@ -93,3 +93,17 @@ packages_dev:
 packages_stem:
   - [ 'celestia',
   'stellarium']
+packages_aur:
+  - [ 'fritzing',
+    'xflux',
+    'package-query',
+    'yaourt',
+    'hamlib',
+    'grig',
+    'gpredict',
+    'xflux-gui-git',
+    'bazel',
+    'cuda',
+    'dasher',
+    'openrocket',
+    'mu-editor']
