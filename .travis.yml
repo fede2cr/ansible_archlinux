@@ -40,6 +40,4 @@ script:
   - "sudo ansible-playbook -i inventory/hosts.example jupyter-notebook/install-jupyter.yml"
   - "ansible-playbook -i inventory/hosts.example --syntax-check phant.io/install-phant.yml"
   - "sudo ansible-playbook -i inventory/hosts.example phant.io/install-phant.yml"
-  - "ansible-playbook -i inventory/hosts.example --syntax-check certbot_install/certbot_install.yml"
-  - "sudo ansible-playbook -i inventory/hosts.example certbot_install/certbot_install.yml"
   - "curl -s https://raw.githubusercontent.com/mikkeloscar/arch-travis/master/arch-travis.sh | bash"
