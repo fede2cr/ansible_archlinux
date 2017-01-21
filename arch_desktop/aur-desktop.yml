@@ -22,5 +22,6 @@
         - cuda
         - dasher
         - openrocket
+        - mu-editor
           #- cudnn
           # - python-tensorflow
