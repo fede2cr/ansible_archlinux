@@ -2,7 +2,7 @@
 - name: Instalación de Phant.IO para IoT
   hosts: all
   tasks:
-    - name: Instala paquetes requeridos
+    - name: Instala paquetes requeridos en Debian/Ubuntu
       apt: 
         name: "{{ item }}"
         state: present
@@ -11,6 +11,13 @@
         - npm
         - nodejs-legacy
       become: yes
+      when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+    - name: Instala paquetes requeridos en Arch Linux
+      pacman:
+        name: npm
+        state: present
+      become: yes
+      when: ansible_distribution == 'Archlinux'
     - name: Instala phant usando npm
       npm: name=phant global=yes
       become: yes
