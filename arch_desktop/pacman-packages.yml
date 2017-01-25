@@ -54,5 +54,6 @@
       with_items:
         - NetworkManager
         - org.cups.cupsd.service
+        - fail2ban
       become: yes
       ignore_errors: true

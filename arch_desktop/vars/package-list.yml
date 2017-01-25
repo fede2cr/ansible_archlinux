@@ -1,6 +1,8 @@
 ---
 packages_base:
   - [ 'ansible',
+    'smartmontools',
+    'fail2ban',
     'screen',
     'bind-tools',
     'python-pip',
