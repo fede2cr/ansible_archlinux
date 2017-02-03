@@ -91,6 +91,7 @@ packages_dev:
     'strace',
     'syslinux',
     'lxc',
+    'libftdi-compat',
     'virt-manager']
 packages_stem:
   - [ 'celestia',
