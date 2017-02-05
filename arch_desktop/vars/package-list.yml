@@ -85,6 +85,8 @@ packages_dev:
     'cuda',
     'git',
     'kicad',
+    'kicad-library',
+    'kicad-library-3d',
     'mksyslinux',
     'processing',
     'rpmextract',
@@ -92,6 +94,7 @@ packages_dev:
     'syslinux',
     'lxc',
     'libftdi-compat',
+    'gtkwave',
     'virt-manager']
 packages_stem:
   - [ 'celestia',
