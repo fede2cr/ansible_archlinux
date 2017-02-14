@@ -118,4 +118,5 @@ packages_aur:
     'openrocket',
     'gifcurry',
     'git-lfs',
+    'ttf-google-fonts-git',
     'mu-editor']
