@@ -2,7 +2,7 @@
 - name: Install the AUR packages remaining for full desktop
   hosts: all
   tasks:
-    - include_vars: package-list.yml
+    - include_vars: vars/package-list.yml
     - name: Upgrades packages and pacman repo
       pacman: update_cache=yes 
       become: yes

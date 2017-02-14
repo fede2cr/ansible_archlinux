@@ -1,6 +1,7 @@
 ---
 packages_base:
   - [ 'ansible',
+    'btrfs-progs',
     'smartmontools',
     'fail2ban',
     'screen',
@@ -43,7 +44,9 @@ packages_desktop:
     'gtk3-print-backends',
     'gthumb',
     'guvcview',
+    'gifsicle',
     'hplip',
+    'hugin',
     'inkscape',
     'k3b',
     'kteatime',
@@ -93,6 +96,7 @@ packages_dev:
     'strace',
     'syslinux',
     'lxc',
+    'luarocks',
     'libftdi-compat',
     'gtkwave',
     'virt-manager']
@@ -112,4 +116,6 @@ packages_aur:
     'cuda',
     'dasher',
     'openrocket',
+    'gifcurry',
+    'git-lfs',
     'mu-editor']
