@@ -119,4 +119,5 @@ packages_aur:
     'gifcurry',
     'git-lfs',
     'ttf-google-fonts-git',
+    'gimp-plugin-resynthesizer-git',
     'mu-editor']
