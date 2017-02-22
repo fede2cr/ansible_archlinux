@@ -78,6 +78,7 @@ packages_dev:
     'arduino-avr-core',
     'atom',
     'base-devel',
+    'ccache',
     'qscintilla-qt5',
     'python-qscintilla-qt5-common',
     'python-pycodestyle',
