@@ -107,13 +107,11 @@ packages_stem:
   'stellarium']
 packages_aur:
   - [ 'fritzing',
-    'xflux',
     'package-query',
     'yaourt',
     'hamlib',
     'grig',
     'gpredict',
-    'xflux-gui-git',
     'bazel',
     'cuda',
     'dasher',
