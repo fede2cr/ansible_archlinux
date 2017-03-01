@@ -23,6 +23,7 @@ packages_base:
     'openssh',
     'tcpdump',
     'vim',
+    'unrar',
     'wget']
 packages_desktop:
   - [ 'audacity',
