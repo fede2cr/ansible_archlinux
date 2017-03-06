@@ -24,6 +24,7 @@ packages_base:
     'tcpdump',
     'vim',
     'unrar',
+    'bridge-utils',
     'wget']
 packages_desktop:
   - [ 'audacity',
