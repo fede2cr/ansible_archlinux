@@ -107,6 +107,8 @@ packages_dev:
 packages_stem:
   - [ 'celestia',
   'gqrx',
+  'gnuradio',
+  'gnuradio-companion',
   'stellarium']
 packages_aur:
   - [ 'fritzing',
