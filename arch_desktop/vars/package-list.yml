@@ -106,6 +106,7 @@ packages_dev:
     'virt-manager']
 packages_stem:
   - [ 'celestia',
+  'gqrx',
   'stellarium']
 packages_aur:
   - [ 'fritzing',
