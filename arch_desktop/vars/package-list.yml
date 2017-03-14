@@ -25,6 +25,7 @@ packages_base:
     'vim',
     'unrar',
     'bridge-utils',
+    'nmap',
     'wget']
 packages_desktop:
   - [ 'audacity',
@@ -109,6 +110,7 @@ packages_stem:
   'gqrx',
   'gnuradio',
   'gnuradio-companion',
+  'kstars',
   'stellarium']
 packages_aur:
   - [ 'fritzing',
