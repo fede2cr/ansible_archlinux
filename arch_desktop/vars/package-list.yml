@@ -26,6 +26,7 @@ packages_base:
     'unrar',
     'bridge-utils',
     'nmap',
+    'lftp',
     'wget']
 packages_desktop:
   - [ 'audacity',
