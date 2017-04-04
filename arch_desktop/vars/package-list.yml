@@ -27,6 +27,7 @@ packages_base:
     'bridge-utils',
     'nmap',
     'lftp',
+    'snapd',
     'wget']
 packages_desktop:
   - [ 'audacity',
@@ -128,4 +129,13 @@ packages_aur:
     'git-lfs',
     'ttf-google-fonts-git',
     'gimp-plugin-resynthesizer-git',
+    'bossa',
+    'soapysdr-git',
+    'limesuite-git',
+    'python-qt.py',
+    'python-pyqtgraph',
+    'simplesoapy',
+    'simplespectral',
+    'soapy_power',
+    'qspectrumanalyzer-git',
     'mu-editor']
