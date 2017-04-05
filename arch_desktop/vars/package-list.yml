@@ -28,6 +28,7 @@ packages_base:
     'nmap',
     'lftp',
     'snapd',
+    'linux-headers',
     'wget']
 packages_desktop:
   - [ 'audacity',
