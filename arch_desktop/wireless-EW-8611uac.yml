@@ -1,0 +1,18 @@
+---
+- name: Installs EW-8611uac direless driver
+  hosts: all
+  tasks:
+    - name: Code download from github gnab/rtl8812au
+      git:
+        dest: /usr/src/8812au-4.2.2
+        repo: https://github.com/gnab/rtl8812au.git
+      become: yes
+    - name: DKMS add 
+      command: dkms add -m 8812au -v 4.2.2
+      become: yes
+    - name: DKMS build 
+      command: dkms build -m 8812au -v 4.2.2
+      become: yes
+    - name: DKMS install
+      command: dkms install -m 8812au -v 4.2.2
+      become: yes
