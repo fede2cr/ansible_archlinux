@@ -139,4 +139,5 @@ packages_aur:
     'simplespectral',
     'soapy_power',
     'qspectrumanalyzer-git',
+    'urh',
     'mu-editor']
