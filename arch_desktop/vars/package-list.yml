@@ -29,6 +29,7 @@ packages_base:
     'lftp',
     'snapd',
     'linux-headers',
+    'wipe',
     'wget']
 packages_desktop:
   - [ 'audacity',
