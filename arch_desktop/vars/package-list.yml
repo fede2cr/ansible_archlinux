@@ -30,6 +30,7 @@ packages_base:
     'snapd',
     'linux-headers',
     'wipe',
+    'pixz',
     'wget']
 packages_desktop:
   - [ 'audacity',
