@@ -141,4 +141,9 @@ packages_aur:
     'soapy_power',
     'qspectrumanalyzer-git',
     'urh',
+    'wxtoimg',
+    'pothos-git',
+    'liquid-dsp-git',
+    'libicns',
+    'cubicsdr-git',
     'mu-editor']

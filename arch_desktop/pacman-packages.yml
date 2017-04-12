@@ -45,6 +45,7 @@
         - jsonmerge
         - droopescan
         - adafruit-ampy
+        - zmq
       become: yes
     - name: Starts and enable services
       service:
