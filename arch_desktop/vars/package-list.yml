@@ -147,4 +147,6 @@ packages_aur:
     'liquid-dsp-git',
     'libicns',
     'cubicsdr-git',
+    'snapcraft',
+    'usb-creator',
     'mu-editor']
