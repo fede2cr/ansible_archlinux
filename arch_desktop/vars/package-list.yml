@@ -109,6 +109,7 @@ packages_dev:
     'luarocks',
     'libftdi-compat',
     'gtkwave',
+    'metasploit',
     'virt-manager']
 packages_stem:
   - [ 'celestia',
@@ -149,4 +150,5 @@ packages_aur:
     'cubicsdr-git',
     'snapcraft',
     'usb-creator',
+    'solaar',
     'mu-editor']
