@@ -81,6 +81,7 @@ packages_desktop:
     'wireshark-gtk',
     'xorg-server',
     'redshift',
+    'krita',
     'youtube-dl']
 packages_dev:
   - [ 'arduino',
