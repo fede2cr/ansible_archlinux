@@ -31,6 +31,7 @@ packages_base:
     'linux-headers',
     'wipe',
     'pixz',
+    'openvpn',
     'wget']
 packages_desktop:
   - [ 'audacity',
