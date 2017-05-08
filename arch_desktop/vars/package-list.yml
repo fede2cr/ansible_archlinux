@@ -87,6 +87,7 @@ packages_desktop:
     'polari',
     'hunspell-en',
     'hunspell-es',
+    'asciinema',
     'youtube-dl']
 packages_dev:
   - [ 'arduino',
