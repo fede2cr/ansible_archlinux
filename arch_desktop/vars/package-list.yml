@@ -85,6 +85,8 @@ packages_desktop:
     'krita',
     'keybase',
     'polari',
+    'hunspell-en',
+    'hunspell-es',
     'youtube-dl']
 packages_dev:
   - [ 'arduino',
