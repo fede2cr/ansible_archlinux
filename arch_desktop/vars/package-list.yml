@@ -88,6 +88,7 @@ packages_desktop:
     'hunspell-en',
     'hunspell-es',
     'asciinema',
+    'phantomjs',
     'youtube-dl']
 packages_dev:
   - [ 'arduino',
@@ -117,6 +118,7 @@ packages_dev:
     'libftdi-compat',
     'gtkwave',
     'metasploit',
+    'npm',
     'virt-manager']
 packages_stem:
   - [ 'celestia',
