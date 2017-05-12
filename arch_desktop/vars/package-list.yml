@@ -160,4 +160,5 @@ packages_aur:
     'snapcraft',
     'usb-creator',
     'solaar',
+    'leiningen',
     'mu-editor']

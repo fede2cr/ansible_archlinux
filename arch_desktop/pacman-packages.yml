@@ -46,6 +46,7 @@
         - droopescan
         - adafruit-ampy
         - zmq
+        - shodan
       become: yes
     - name: Starts and enable services
       service:
