@@ -10,15 +10,15 @@ This is an ansible recipe I use to rebuild my Arch desktop, so it's quite person
 
 3. Install the oficial packages by running
 ```bash
-ansible-playbook pacman-packages.yml -i ../inventory/hosts.example -K
+ansible-playbook pacman-packages.yml -i ../inventory/hosts.example
 ```
 4. Install yaourt and makepkg, needed for AUR by running:
 ```bash
-ansible-playbook yaourt-install.yml -i ../inventory/hosts.example -K
+ansible-playbook yaourt-install.yml -i ../inventory/hosts.example
 ```
 5. Install the AUR based packages by running:
 ```bash
-ansible-playbook aur-desktop.yml -i ../inventory/hosts.example -K 
+ansible-playbook aur-desktop.yml -i ../inventory/hosts.example
 ```
 
 ## TODO
