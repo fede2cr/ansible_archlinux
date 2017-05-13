@@ -32,6 +32,7 @@ packages_base:
     'wipe',
     'pixz',
     'openvpn',
+    'iotop',
     'wget']
 packages_desktop:
   - [ 'audacity',
@@ -89,6 +90,7 @@ packages_desktop:
     'hunspell-es',
     'asciinema',
     'phantomjs',
+    'openscad',
     'youtube-dl']
 packages_dev:
   - [ 'arduino',

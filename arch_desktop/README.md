@@ -18,7 +18,7 @@ ansible-playbook yaourt-install.yml -i ../inventory/hosts.example -K
 ```
 5. Install the AUR based packages by running:
 ```bash
-ansible-playbook aur-desktop.yml -i ../inventory/hosts.example -K -M library/ansible-aur/
+ansible-playbook aur-desktop.yml -i ../inventory/hosts.example -K 
 ```
 
 ## TODO
