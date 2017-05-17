@@ -171,4 +171,5 @@ packages_aur:
     'usb-creator',
     'solaar',
     'leiningen',
+    'shotcut',
     'mu-editor']
