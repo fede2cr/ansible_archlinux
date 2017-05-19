@@ -33,6 +33,7 @@ packages_base:
     'pixz',
     'openvpn',
     'iotop',
+    'ntfs-3g',
     'wget']
 packages_desktop:
   - [ 'audacity',
