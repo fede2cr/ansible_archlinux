@@ -47,6 +47,16 @@
         - adafruit-ampy
         - zmq
         - shodan
+        - datetime
+        - rasterio
+        - pandas
+        - seaborn
+        - ipyleaflet
+        - planet
+        - utm
+        - shapely
+        - osmapi
+        - geopy
       become: yes
     - name: Starts and enable services
       service:

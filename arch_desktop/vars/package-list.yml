@@ -129,6 +129,7 @@ packages_stem:
   'gnuradio',
   'gnuradio-companion',
   'kstars',
+  'gdal',
   'stellarium']
 packages_aur:
   - [ 'fritzing',
@@ -173,4 +174,5 @@ packages_aur:
     'solaar',
     'leiningen',
     'shotcut',
+    'python-gdal',
     'mu-editor']
