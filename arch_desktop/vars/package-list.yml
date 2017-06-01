@@ -92,6 +92,8 @@ packages_desktop:
     'asciinema',
     'phantomjs',
     'openscad',
+    'nss-mdns',
+    'simplescreenrecorder',
     'youtube-dl']
 packages_dev:
   - [ 'arduino',
@@ -175,4 +177,5 @@ packages_aur:
     'leiningen',
     'shotcut',
     'python-gdal',
+    'rot13',
     'mu-editor']

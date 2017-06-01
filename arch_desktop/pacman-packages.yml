@@ -67,5 +67,6 @@
         - NetworkManager
         - org.cups.cupsd.service
         - fail2ban
+        - avahi-daemon.service
       become: yes
       ignore_errors: true
