@@ -94,6 +94,7 @@ packages_desktop:
     'openscad',
     'nss-mdns',
     'simplescreenrecorder',
+    'gparted',
     'youtube-dl']
 packages_dev:
   - [ 'arduino',
