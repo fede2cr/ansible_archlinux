@@ -125,6 +125,7 @@ packages_dev:
     'gtkwave',
     'metasploit',
     'npm',
+    'aircrack-ng',
     'virt-manager']
 packages_stem:
   - [ 'celestia',
