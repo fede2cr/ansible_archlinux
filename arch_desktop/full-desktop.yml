@@ -12,12 +12,6 @@
           [Coredump]
           Storage=none
       become: yes
-    - name: Deshabilita servicio de systemd-coredump
-      service:
-        name: systemd-coredump.socket
-        enabled: no
-        state: stopped
-      become: yes
     - name: Deshabilita biosdevname
       lineinfile:
         regexp: '^GRUB_CMDLINE_LINUX=""'
