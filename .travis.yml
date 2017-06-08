@@ -3,7 +3,7 @@ sudo: required
 env:
   - ARCH_TRAVIS_CLEAN_CHROOT=1
 
-dist: trusty
+#dist: trusty
 
 before_install:
   - sudo apt-get -qq update
