@@ -15,21 +15,19 @@ arch:
   packages:
     - ansible
   script:
-    - "ansible-playbook -i inventory/hosts.example arch_desktop/full-desktop.yml --syntax-check"
-    - "sudo ansible-playbook -i inventory/hosts.example arch_desktop/full-desktop.yml"
+    - "ANSIBLE_CONFIG=.ansible-travis.cfg ansible-playbook -i inventory/hosts.example arch_desktop/full-desktop.yml --syntax-check"
+    - "sudo ANSIBLE_CONFIG=.ansible-travis.cfg ansible-playbook -i inventory/hosts.example arch_desktop/full-desktop.yml"
     - >
-      sudo ansible-playbook -i inventory/hosts.example arch_desktop/full-desktop.yml
+      sudo ANSIBLE_CONFIG=.ansible-travis.cfg ansible-playbook -i inventory/hosts.example arch_desktop/full-desktop.yml
       | grep -q 'changed=0.*failed=0'
       && (echo 'Idempotence test: pass' && exit 0)
       || (echo 'Idempotence test: fail' && exit 1)
-    - "ansible-playbook -i inventory/hosts.example arch_desktop/pacman-packages.yml --syntax-check"
-    - "sudo ansible-playbook -i inventory/hosts.example arch_desktop/pacman-packages.yml"
+    - "ANSIBLE_CONFIG=.ansible-travis.cfg ansible-playbook -i inventory/hosts.example arch_desktop/pacman-packages.yml --syntax-check"
+    - "sudo ANSIBLE_CONFIG=.ansible-travis.cfg ansible-playbook -i inventory/hosts.example arch_desktop/pacman-packages.yml"
     - >
-      sudo ansible-playbook -i inventory/hosts.example arch_desktop/pacman-packages.yml
+      sudo ANSIBLE_CONFIG=.ansible-travis.cfg ansible-playbook -i inventory/hosts.example arch_desktop/pacman-packages.yml
       | grep -q 'changed=0.*failed=0'
       && (echo 'Idempotence test: pass' && exit 0)
       || (echo 'Idempotence test: fail' && exit 1)
-    - "ansible-playbook -i inventory/hosts.example --syntax-check terminal_kitty/terminal_kitty.yml"
-    - "sudo ansible-playbook -i inventory/hosts.example terminal_kitty/terminal_kitty.yml"
 script:
   - "curl -s https://raw.githubusercontent.com/mikkeloscar/arch-travis/master/arch-travis.sh | bash"
