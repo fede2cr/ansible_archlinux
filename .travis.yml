@@ -32,8 +32,6 @@ arch:
     - "ansible-playbook -i inventory/hosts.example --syntax-check terminal_kitty/terminal_kitty.yml"
     - "sudo ansible-playbook -i inventory/hosts.example terminal_kitty/terminal_kitty.yml"
 script:
-  - "ansible-playbook -i inventory/hosts.example --syntax-check jupyter-notebook/install-jupyter.yml"
-  - "sudo ansible-playbook -i inventory/hosts.example jupyter-notebook/install-jupyter.yml"
   - "ansible-playbook -i inventory/hosts.example --syntax-check phant.io/install-phant.yml"
   - "sudo ansible-playbook -i inventory/hosts.example phant.io/install-phant.yml"
   - "curl -s https://raw.githubusercontent.com/mikkeloscar/arch-travis/master/arch-travis.sh | bash"
