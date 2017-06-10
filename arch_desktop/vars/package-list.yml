@@ -126,6 +126,11 @@ packages_dev:
     'metasploit',
     'npm',
     'aircrack-ng',
+    'wifite',
+    'rfkill',
+    'pyrit',
+    'reaver',
+    'medusa',
     'virt-manager']
 packages_stem:
   - [ 'celestia',
@@ -180,4 +185,5 @@ packages_aur:
     'shotcut',
     'python-gdal',
     'rot13',
+    'anydesk',
     'mu-editor']
