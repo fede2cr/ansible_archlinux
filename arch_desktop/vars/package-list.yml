@@ -95,6 +95,8 @@ packages_desktop:
     'nss-mdns',
     'simplescreenrecorder',
     'gparted',
+    'gmic',
+    'gimp-plugin-gmic',
     'youtube-dl']
 packages_dev:
   - [ 'arduino',
