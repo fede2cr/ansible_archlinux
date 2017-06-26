@@ -137,6 +137,7 @@ packages_dev:
     'go-ipfs',
     'bitcoin-qt',
     'electrum',
+    'steghide',
     'virt-manager']
 packages_stem:
   - [ 'celestia',
