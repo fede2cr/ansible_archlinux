@@ -71,3 +71,8 @@
         - avahi-daemon.service
       become: yes
       ignore_errors: true
+    - name: Paquetes de npm
+      npm: name={{ item }} state=latest global=yes
+      with_flattened:
+        - "{{ packages_npm }}"
+      become: yes
