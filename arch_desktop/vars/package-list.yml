@@ -194,6 +194,7 @@ packages_aur:
     'python-gdal',
     'rot13',
     'anydesk',
+    'flacon',
     'mu-editor']
 packages_npm:
   - [ 'node-ssllabs',
