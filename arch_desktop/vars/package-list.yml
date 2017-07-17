@@ -139,6 +139,7 @@ packages_dev:
     'bitcoin-qt',
     'electrum',
     'steghide',
+    'openvas',
     'virt-manager']
 packages_stem:
   - [ 'celestia',
@@ -195,6 +196,7 @@ packages_aur:
     'rot13',
     'anydesk',
     'flacon',
+    'visual-studio-code',
     'mu-editor']
 packages_npm:
   - [ 'node-ssllabs',
