@@ -99,6 +99,7 @@ packages_desktop:
     'gimp-plugin-gmic',
     'lolcat',
     'freemind',
+    'xorg-xkill',
     'youtube-dl']
 packages_dev:
   - [ 'arduino',
