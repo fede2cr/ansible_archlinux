@@ -202,4 +202,5 @@ packages_aur:
 packages_npm:
   - [ 'node-ssllabs',
     'underscore',
+    'pxt',
     'should' ]
