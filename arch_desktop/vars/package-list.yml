@@ -203,4 +203,5 @@ packages_npm:
   - [ 'node-ssllabs',
     'underscore',
     'pxt',
+    'pxt-microbit',
     'should' ]
