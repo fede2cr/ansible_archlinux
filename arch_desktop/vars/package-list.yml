@@ -198,6 +198,7 @@ packages_aur:
     'anydesk',
     'flacon',
     'visual-studio-code',
+    'libosmocore',
     'mu-editor']
 packages_npm:
   - [ 'node-ssllabs',
