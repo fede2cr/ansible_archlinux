@@ -76,3 +76,10 @@
       with_flattened:
         - "{{ packages_npm }}"
       become: yes
+    - name: Paquetes de npm (desde git)
+      npm:
+        name: pxt-adafruit
+        path: git://github.com/Microsoft/pxt-adafruit.git
+        state: latest
+        global: yes
+      become: yes
