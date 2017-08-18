@@ -34,6 +34,7 @@ packages_base:
     'openvpn',
     'iotop',
     'ntfs-3g',
+    'exa',
     'wget']
 packages_desktop:
   - [ 'audacity',
