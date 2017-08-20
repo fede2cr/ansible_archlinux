@@ -35,6 +35,7 @@ packages_base:
     'iotop',
     'ntfs-3g',
     'exa',
+    'ipv6calc',
     'wget']
 packages_desktop:
   - [ 'audacity',
