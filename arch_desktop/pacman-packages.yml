@@ -58,6 +58,7 @@
         - shapely
         - osmapi
         - geopy
+        - lxc
       become: yes
     - name: Starts and enable services
       service:
