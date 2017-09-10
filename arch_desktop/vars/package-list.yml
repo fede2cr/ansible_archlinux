@@ -102,6 +102,8 @@ packages_desktop:
     'lolcat',
     'freemind',
     'xorg-xkill',
+    'jack2',
+    'qjackctl',
     'youtube-dl']
 packages_dev:
   - [ 'arduino',
@@ -143,6 +145,8 @@ packages_dev:
     'electrum',
     'steghide',
     'openvas',
+    'libxml++2.6',
+    'pulseview',
     'virt-manager']
 packages_stem:
   - [ 'celestia',
@@ -201,6 +205,10 @@ packages_aur:
     'flacon',
     'visual-studio-code',
     'libosmocore',
+    'me-tv-bzr',
+    'cadence',
+    'slic3r',
+    'perl-wx',
     'mu-editor']
 packages_npm:
   - [ 'node-ssllabs',
