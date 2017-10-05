@@ -209,6 +209,7 @@ packages_aur:
     'cadence',
     'slic3r',
     'perl-wx',
+    'librepcb-git',
     'mu-editor']
 packages_npm:
   - [ 'node-ssllabs',
