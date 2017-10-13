@@ -147,6 +147,8 @@ packages_dev:
     'openvas',
     'libxml++2.6',
     'pulseview',
+    'docker',
+    'docker-compose',
     'virt-manager']
 packages_stem:
   - [ 'celestia',
@@ -210,6 +212,8 @@ packages_aur:
     'slic3r',
     'perl-wx',
     'librepcb-git',
+    'qgis',
+    'signal',
     'mu-editor']
 packages_npm:
   - [ 'node-ssllabs',
