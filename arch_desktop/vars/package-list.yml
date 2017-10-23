@@ -104,6 +104,7 @@ packages_desktop:
     'xorg-xkill',
     'jack2',
     'qjackctl',
+    'noto-fonts-emoji',
     'youtube-dl']
 packages_dev:
   - [ 'arduino',
@@ -214,6 +215,7 @@ packages_aur:
     'librepcb-git',
     'qgis',
     'signal',
+    '8192cu-dkms',
     'mu-editor']
 packages_npm:
   - [ 'node-ssllabs',
