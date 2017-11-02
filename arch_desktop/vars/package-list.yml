@@ -36,6 +36,7 @@ packages_base:
     'ntfs-3g',
     'exa',
     'ipv6calc',
+    'pbzip2',
     'wget']
 packages_desktop:
   - [ 'audacity',
@@ -105,6 +106,7 @@ packages_desktop:
     'jack2',
     'qjackctl',
     'noto-fonts-emoji',
+    'gephi',
     'youtube-dl']
 packages_dev:
   - [ 'arduino',
@@ -137,7 +139,6 @@ packages_dev:
     'npm',
     'aircrack-ng',
     'wifite',
-    'rfkill',
     'pyrit',
     'reaver',
     'medusa',
@@ -216,6 +217,8 @@ packages_aur:
     'qgis',
     'signal',
     '8192cu-dkms',
+    'namebench',
+    'ssllabs-scan',
     'mu-editor']
 packages_npm:
   - [ 'node-ssllabs',
