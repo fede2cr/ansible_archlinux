@@ -10,21 +10,9 @@
       pacman: name={{ item }} state=present
       with_flattened:
         - "{{ packages_base }}"
-      become: yes
-    - name: Installs desktop packages
-      pacman: name={{ item }} state=present
-      with_flattened:
         - "{{ packages_desktop }}"
-      become: yes
-    - name: Installs dev packages
-      pacman: name={{ item }} state=present
-      with_flattened:
-        - "{{ packages_dev }}"
-      become: yes
-    - name: Installs stem packages
-      pacman: name={{ item }} state=present
-      with_flattened:
         - "{{ packages_stem }}"
+        - "{{ packages_dev }}"
       become: yes
     - name: Installs python2 modules
       pip:
@@ -41,24 +29,8 @@
         name: "{{ item }}"
         executable: pip3
         state: latest
-      with_items:
-        - jsonmerge
-        - droopescan
-        - adafruit-ampy
-        - zmq
-        - shodan
-        - datetime
-        - numpy
-        - rasterio
-        - pandas
-        - seaborn
-        - ipyleaflet
-        - planet
-        - utm
-        - shapely
-        - osmapi
-        - geopy
-        - lxc
+      with_flattened:
+        - "{{ packages_pip3 }}"
       become: yes
     - name: Starts and enable services
       service:
